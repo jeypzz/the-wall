@@ -48,19 +48,16 @@ var commentCounter = 0;
     el = document.createElement('div');
     el.className = "CommentBox";
     el.innerHTML =
-        //   '<div class=\"avatar_comment col-md-1\">'+
-        //     '<img src=\"https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg\" alt=\"avatar\"/>'+
-        //   '</div>'+
           '<p>'+ comment +'</p>'+
           '<div class=\"tools_comment\">'+
-          "<img src=\"https://drive.google.com/file/d/1r_ZVCScC1NsPMM1idHursUIJFD8f7Bje/view?usp=sharing\" alt='comment icon'/><a class='comment' href='#'>"+ commentCounter +" Comment</a>"+
-          '<i class=\"fa fa-thumbs-o-up\"></i> <span class=\"count\"></span>'+
-          '<span aria-hidden=\"true\"> · </span>'+
-          '<a class=\"replay\" href=\"#\">Reply</a><span aria-hidden=\"true\"> · </span>'+
-              '<span>Few seconds ago</span>'+
+          "<a class='comment' href='#'> <img src=\"https://raw.githubusercontent.com/jeypzz/the-wall/main/assets/images/comment.png\" alt='comment icon'/>"+ commentCounter +" Comment</a>"+
+          "<a class='edit' href='#'> <img src=\"https://raw.githubusercontent.com/jeypzz/the-wall/main/assets/images/pencil-write.png\" alt='edit icon'/>Edit</a>"+
+          "<a class='delete' href='#'> <img src=\"https://raw.githubusercontent.com/jeypzz/the-wall/main/assets/images/delete.png\" alt='delete icon'/>Delete</a>"+
+            "<span class='user'><img src=\"https://raw.githubusercontent.com/jeypzz/the-wall/main/assets/images/user-icon.png\"/ alt='user icon'> <span id=bold>You</span> - Few seconds ago</span>"+
           '</div>'+
           '<ul class="child_replay"></ul>'+
           '</div>';
       document.getElementById('post-area').prepend(el);
+      modal.style.display = "none";
       $('#textArea').val('');
   }
